@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:anytime/planForm.dart';
+import 'package:anytime/home/atList.dart';
 
 class PlanList extends StatefulWidget {
   @override
@@ -38,10 +39,11 @@ class _PlanList extends State<PlanList> with SingleTickerProviderStateMixin {
         controller: _tabController,
         children: tabs.map((e) {
           //创建3个Tab页
-          return Container(
-            alignment: Alignment.center,
-            child: Text(e, textScaleFactor: 5),
-          );
+          return AtList();
+          // return Container(
+          //   alignment: Alignment.center,
+          //   child: Text(e, textScaleFactor: 5),
+          // );
         }).toList(),
       ),
       bottomNavigationBar: BottomNavigationBar(
